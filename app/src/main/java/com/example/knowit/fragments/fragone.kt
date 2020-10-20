@@ -9,7 +9,7 @@ import android.widget.ProgressBar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.knowit.AdapterRecycler
-import com.example.knowit.ApiClient
+import com.example.knowit.Model.ApiClient
 import com.example.knowit.R
 import com.example.knowit.data.Content
 import retrofit2.Call
