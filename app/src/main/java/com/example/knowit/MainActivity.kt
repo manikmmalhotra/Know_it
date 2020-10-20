@@ -3,6 +3,10 @@ package com.example.knowit
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import com.example.knowit.fragments.fragfour
+import com.example.knowit.fragments.fragone
+import com.example.knowit.fragments.fragthree
+import com.example.knowit.fragments.fragtwo
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -19,8 +23,8 @@ class MainActivity : AppCompatActivity() {
                 replaceFragment(fragone())
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.search -> {
-                println("Search pressed")
+            R.id.category -> {
+                println("category pressed")
                 replaceFragment(fragtwo())
                 return@OnNavigationItemSelectedListener true
             }
@@ -29,8 +33,8 @@ class MainActivity : AppCompatActivity() {
                 replaceFragment(fragthree())
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.category -> {
-                println("category pressed")
+            R.id.saved -> {
+                println("search pressed")
                 replaceFragment(fragfour())
                 return@OnNavigationItemSelectedListener true
             }

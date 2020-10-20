@@ -1,6 +1,5 @@
 package com.example.knowit.data
 
-import com.example.knowit.Article
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
