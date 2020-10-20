@@ -17,4 +17,10 @@ interface RetrofitInterface{
         @Query("apiKey") apiKey:String
     ): Call<Content>
 
+    @GET("everything")
+    fun getSearch(
+        @Query("q") querry:String,
+        @Query("apiKey") apiKey:String
+    ): Call<Content>
+
 }
