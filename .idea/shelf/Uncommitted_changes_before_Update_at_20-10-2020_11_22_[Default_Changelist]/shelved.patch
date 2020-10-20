@@ -1,0 +1,60 @@
+Index: app/src/main/java/com/example/knowit/Article.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.knowit\r\n\r\nimport com.google.gson.annotations.Expose\r\nimport com.google.gson.annotations.SerializedName\r\n\r\nclass Article {\r\n\r\n    //check the content under source\r\n\r\n    @SerializedName(\"source\")\r\n    @Expose\r\n    var source: String? = null\r\n    @SerializedName(\"id\")\r\n    @Expose\r\n    var id: String? = null\r\n    @SerializedName(\"name\")\r\n    @Expose\r\n    var name: String? = null\r\n    @SerializedName(\"author\")\r\n    @Expose\r\n    var author: String? = null\r\n    @SerializedName(\"title\")\r\n    @Expose\r\n    var title: String? = null\r\n    @SerializedName(\"description\")\r\n    @Expose\r\n    var description: String? = null\r\n    @SerializedName(\"url\")\r\n    @Expose\r\n    var url: String? = null\r\n    @SerializedName(\"urlToImage\")\r\n    @Expose\r\n    var urlToImage: String? = null\r\n    @SerializedName(\"publishedAt\")\r\n    @Expose\r\n    var publishedAt: String? = null\r\n    @SerializedName(\"content\")\r\n    @Expose\r\n    var content: String? = null\r\n}\r\n
+===================================================================
+--- app/src/main/java/com/example/knowit/Article.kt	(revision ce3b00bdf7cdd244be7d88922387f36069954dbb)
++++ app/src/main/java/com/example/knowit/data/Article.kt	(date 1603125422287)
+@@ -1,40 +1,39 @@
+-package com.example.knowit
++package com.example.knowit.data
+ 
+ import com.google.gson.annotations.Expose
+ import com.google.gson.annotations.SerializedName
+ 
+ class Article {
+-
+-    //check the content under source
+-
+     @SerializedName("source")
+     @Expose
+-    var source: String? = null
+-    @SerializedName("id")
+-    @Expose
+-    var id: String? = null
+-    @SerializedName("name")
+-    @Expose
+-    var name: String? = null
++    var source: Source? = null
++
+     @SerializedName("author")
+     @Expose
+     var author: String? = null
++
+     @SerializedName("title")
+     @Expose
+     var title: String? = null
++
+     @SerializedName("description")
+     @Expose
+     var description: String? = null
++
+     @SerializedName("url")
+     @Expose
+     var url: String? = null
++
+     @SerializedName("urlToImage")
+     @Expose
+     var urlToImage: String? = null
++
+     @SerializedName("publishedAt")
+     @Expose
+     var publishedAt: String? = null
++
+     @SerializedName("content")
+     @Expose
+     var content: String? = null
+-}
++
++}
+\ No newline at end of file

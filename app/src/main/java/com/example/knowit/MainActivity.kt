@@ -3,6 +3,10 @@ package com.example.knowit
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import com.example.knowit.fragments.fragfour
+import com.example.knowit.fragments.fragone
+import com.example.knowit.fragments.fragthree
+import com.example.knowit.fragments.fragtwo
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 
