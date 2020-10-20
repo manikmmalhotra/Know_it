@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.cardview.widget.CardView
@@ -10,14 +10,15 @@
         app:cardElevation="6dp"
         app:cardCornerRadius="10dp"
         android:layout_margin="10dp"
-        android:foreground="?selectableItemBackground"
         android:focusable="true">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="5dp"
             android:orientation="vertical">
 
     <TextView
+        android:id="@+id/SourceName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="italic"
@@ -32,12 +33,14 @@
 
 
     <ImageView
+        android:id="@+id/SourceImage"
        android:layout_width="match_parent"
        android:layout_height="200dp"
        android:scaleType="centerCrop"
        android:src="@drawable/background"
        android:layout_margin="10dp"/>
         <TextView
+            android:id="@+id/SourceTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Jacinda Ardern, Hero to Liberals Abroad, Is Validated at Home - The New York Times"
@@ -47,6 +50,7 @@
             android:textColor="@color/colorPrimaryDark"/>
 
     <TextView
+        android:id="@+id/SourceDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="italic"
@@ -57,6 +61,7 @@
         android:textColor="#222323"
         />
         <TextView
+            android:id="@+id/SourceDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="normal"
@@ -71,6 +76,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="normal"
+        android:visibility="gone"
         android:text="@string/content_sample"
         android:layout_marginTop="3dp"
         android:layout_marginLeft="10dp"
@@ -79,6 +85,7 @@
         android:layout_marginStart="10dp" />
 
     <TextView
+        android:id="@+id/SourceAuthor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="italic"
@@ -87,17 +94,18 @@
        android:layout_marginLeft="10dp"
         android:textColor="#222323"
         android:textSize="10dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="10dp"
         android:layout_marginStart="10dp" />
 
     <Button
-    android:layout_width="wrap_content"
-    android:layout_height="20dp"
-    android:text="View Full Coverage"
-    android:layout_gravity="center"
-    android:background="@color/colorPrimaryDark"
-   android:textColor="#E4DDC5"
-    android:textSize="13sp"/>
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="View Full Coverage"
+        android:padding="5dp"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="#E4DDC5"
+        android:textSize="13sp"/>
     </LinearLayout>
 
 

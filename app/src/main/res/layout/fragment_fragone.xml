@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".fragone">
+    tools:context=".fragments.fragone">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,9 +22,15 @@
 
             />
     </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="50dp"/>
+
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_marginBottom="20dp"
+        android:id="@+id/recyclerViewone"
+        android:layout_marginBottom="50dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
