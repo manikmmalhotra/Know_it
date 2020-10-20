@@ -23,8 +23,8 @@ class MainActivity : AppCompatActivity() {
                 replaceFragment(fragone())
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.search -> {
-                println("Search pressed")
+            R.id.category -> {
+                println("category pressed")
                 replaceFragment(fragtwo())
                 return@OnNavigationItemSelectedListener true
             }
@@ -33,8 +33,8 @@ class MainActivity : AppCompatActivity() {
                 replaceFragment(fragthree())
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.category -> {
-                println("category pressed")
+            R.id.saved -> {
+                println("search pressed")
                 replaceFragment(fragfour())
                 return@OnNavigationItemSelectedListener true
             }

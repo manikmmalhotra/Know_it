@@ -7,6 +7,11 @@
         android:icon="@drawable/baseline_home"/>
 
     <item
+        android:id="@+id/category"
+        android:title="Category"
+        android:icon="@drawable/ic_baseline_sort_24"/>
+
+    <item
         android:id="@+id/search"
         android:title="Search"
         android:icon="@drawable/baseline_search"/>
@@ -15,8 +20,5 @@
         android:id="@+id/saved"
         android:title="Saved Collection"
         android:icon="@drawable/baseline_save"/>
-    <item
-        android:id="@+id/category"
-        android:title="Category"
-        android:icon="@drawable/baseline_category"/>
+
 </menu>
