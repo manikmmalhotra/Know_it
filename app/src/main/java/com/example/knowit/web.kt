@@ -1,6 +1,7 @@
 package com.example.knowit
 
 import android.app.Activity
+import android.os.AsyncTask
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,6 +11,9 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import com.example.knowit.db.ContentDataBase
+import com.example.knowit.db.ContentDb
+import kotlinx.android.synthetic.main.activity_web.*
 
 class web : AppCompatActivity() {
 
@@ -28,11 +32,33 @@ class web : AppCompatActivity() {
         var title : String? = intent.getStringExtra("title")
         var date : String? = intent.getStringExtra("date")
 
-        //ContentDataBase(this).getContentDao().addContent()
-
+        val contentDb = ContentDb(name!!,author!!,title!!,web!!,img!!,date!!,descr!!)
 
         webView.webViewClient = MyWebViewClient(this)
         webView.loadUrl(web!!)
+
+        fab.setOnClickListener {
+            savedContent(contentDb)
+        }
+
+
+    }
+
+    private fun savedContent(content:ContentDb){
+        class SavedContent : AsyncTask<Void,Void,Void>(){
+            override fun doInBackground(vararg params: Void?): Void? {
+                ContentDataBase(applicationContext).getContentDao().addContent(content)
+                return null
+            }
+
+            override fun onPostExecute(result: Void?) {
+                super.onPostExecute(result)
+
+                Toast.makeText(applicationContext,"saved",Toast.LENGTH_LONG).show()
+            }
+
+        }
+        SavedContent().execute()
     }
 
 

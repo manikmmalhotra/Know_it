@@ -10,7 +10,7 @@ interface ContentDao {
     @Insert
     fun addContent(content:ContentDb)
 
-    @Query("SELECT * FROM ContentDb")
-    fun getAllContent():List<ContentDb>
+    @Query("SELECT * FROM ContentDb ORDER BY id DESC")
+    suspend fun getAllContent():List<ContentDb>
 
 }
