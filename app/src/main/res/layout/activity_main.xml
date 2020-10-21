@@ -12,9 +12,9 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
         app:menu="@menu/bottom_nav_menu"
-        android:background="@color/colorPrimaryDark"
-        app:itemIconTint="@android:color/white"
-        app:itemTextColor="@android:color/white"
+        android:background="@color/colorDarkNavy"
+        app:itemIconTint="@color/Gold"
+        app:itemTextColor="@color/Gold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"

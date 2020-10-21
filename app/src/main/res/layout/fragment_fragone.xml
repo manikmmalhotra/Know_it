@@ -16,9 +16,9 @@
             android:text="Breaking News"
             android:textStyle="bold"
             android:gravity="center"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/Gold"
             android:textSize="30sp"
-            android:background="#777CB7E6"
+            android:background="@drawable/rounded_corners"
 
             />
     </LinearLayout>

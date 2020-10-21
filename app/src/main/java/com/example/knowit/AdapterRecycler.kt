@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.knowit.data.Content
+import com.squareup.picasso.Picasso
 
 
 class AdapterRecycler(var context: Context, var response: Content) : RecyclerView.Adapter<AdapterRecycler.ContentAdapter>() {
@@ -36,7 +37,13 @@ class AdapterRecycler(var context: Context, var response: Content) : RecyclerVie
         else{
             holder.sourceAuthor.setText("Author :" + "undefined")
         }
+        if(response.articles!!.get(position).urlToImage!=null){
+            Picasso.get().load(response.articles!!.get(position).urlToImage).into(holder.SourceImg)
 
+        }
+        else{
+            holder.SourceImg
+        }
     }
 
     override fun getItemCount(): Int {
