@@ -27,7 +27,7 @@
         android:textSize="15sp"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="10dp"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="#A2790d"
         />
 
 
@@ -47,7 +47,7 @@
             android:textStyle="bold"
             android:textSize="20sp"
             android:layout_margin="10dp"
-            android:textColor="@color/colorPrimaryDark"/>
+            android:textColor="#16085b"/>
 
     <TextView
         android:id="@+id/SourceDate"
@@ -102,10 +102,11 @@
         android:layout_height="30dp"
         android:text="View Full Coverage"
         android:padding="5dp"
+        android:layout_marginTop="3dp"
         android:layout_gravity="center"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="#E4DDC5"
-        android:textSize="13sp"/>
+        android:background="@drawable/rounded_corners"
+        android:textColor="@color/Gold"
+        android:textSize="10sp"/>
     </LinearLayout>
 
 
