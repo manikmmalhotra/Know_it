@@ -8,9 +8,10 @@ import com.example.knowit.fragments.fragone
 import com.example.knowit.fragments.fragthree
 import com.example.knowit.fragments.fragtwo
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var bottomNavigationView: BottomNavigationView
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item->
         when(item.itemId){
@@ -28,13 +29,13 @@ class MainActivity : AppCompatActivity() {
                 replaceFragment(fragtwo())
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.saved -> {
-                println("Showing saved collection")
+            R.id.search -> {
+                println("search")
                 replaceFragment(fragthree())
                 return@OnNavigationItemSelectedListener true
             }
             R.id.saved -> {
-                println("search pressed")
+                println("saved Collection")
                 replaceFragment(fragfour())
                 return@OnNavigationItemSelectedListener true
             }
@@ -49,7 +50,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        bottomNavigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+        bottomNavigationView = findViewById(R.id.bottomNavigation) as BottomNavigationView
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
         replaceFragment(fragone()) //ie home
     }
 
