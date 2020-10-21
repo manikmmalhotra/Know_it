@@ -28,13 +28,13 @@ class MainActivity : AppCompatActivity() {
                 replaceFragment(fragtwo())
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.saved -> {
-                println("Showing saved collection")
+            R.id.search -> {
+                println("search")
                 replaceFragment(fragthree())
                 return@OnNavigationItemSelectedListener true
             }
             R.id.saved -> {
-                println("search pressed")
+                println("saved Collection")
                 replaceFragment(fragfour())
                 return@OnNavigationItemSelectedListener true
             }

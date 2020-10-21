@@ -10,17 +10,36 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.Toast
 import androidx.annotation.RequiresApi
-import kotlinx.android.synthetic.main.activity_web.*
 
 class web : AppCompatActivity() {
+
+    lateinit var webView: WebView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_web)
 
+        webView = findViewById(R.id.webView)
+
+        var name : String? = intent.getStringExtra("name")
+        var author : String? = intent.getStringExtra("author")
+        var web : String? = intent.getStringExtra("web")
+        var img : String? = intent.getStringExtra("img")
+        var descr : String? = intent.getStringExtra("descr")
+        var title : String? = intent.getStringExtra("title")
+        var date : String? = intent.getStringExtra("date")
+
+        //ContentDataBase(this).getContentDao().addContent()
+
 
         webView.webViewClient = MyWebViewClient(this)
-        webView.loadUrl("   ")
+        webView.loadUrl(web!!)
     }
+
+
+
+
+
+
     class MyWebViewClient internal constructor(private val activity: Activity) : WebViewClient() {
 
         @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
@@ -39,4 +58,5 @@ class web : AppCompatActivity() {
             Toast.makeText(activity, "Got Error! $error", Toast.LENGTH_SHORT).show()
         }
     }
+
 }
